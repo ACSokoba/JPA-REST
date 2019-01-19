@@ -5,20 +5,47 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <form action="rest/commune/create" method="POST">
-CREER<br>
+Ajouter une commune<br>
     Nom 
     <input type="text" name="name">    
     <input type="submit" value="Submit">
 </form>
 
+<form action="rest/commune/update" method="POST">
+Modifier la commune<br>
+    Id <br>
+    <input type="text" name="id">    
+    <br>
+    Nouveau nom <br>
+    <input type="text" name="nouveauNom">  
+    <br><br>  
+    Nouveau code postal <br>
+    <input type="text" name="nouveauCodePostal">  
+    <br><br>  
+    <input type="submit" value="Submit">
+</form>
+
+<form action="rest/maire/create" method="POST">
+Ajouter un maire<br>
+    Nom <br>
+    <input type="text" name="nom">    
+    <br>
+    Prenom <br>
+    <input type="text" name="prenom">  
+    <br><br>  
+    <input type="submit" value="Submit">
+</form>
+
+<!-- 
 <form action="rest/commune/retrieve" method="POST">
 POUR RETRIEVE<br>
     ID 
     <input type="text" name="id">    
     <input type="submit" value="Submit">
 </form>
-
+ -->
 
 </body>
 </html>

@@ -35,10 +35,16 @@ public class Commune implements Serializable{
 	@Column(name="nom_commune")
 	private String nom;
 	
-	/*@XmlElement
+	@XmlElement
 	@Column(name="code_postal")
-	private String codePostal;*/
+	private String codePostal;
 	
+	public String getCodePostal() {
+		return codePostal;
+	}
+	public void setCodePostal(String codePostal) {
+		this.codePostal = codePostal;
+	}
 	public Commune() {
 		
 	}

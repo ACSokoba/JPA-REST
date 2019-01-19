@@ -9,7 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -34,7 +34,7 @@ public class Maire implements Serializable{
 	@XmlAttribute
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     
 	@XmlElement
     @Column(name="civilite")
@@ -54,12 +54,22 @@ public class Maire implements Serializable{
     @Temporal(TemporalType.DATE)
 	private Date  dateDeNaissance;
     
-    /*@OneToOne(mappedBy="maire")  
-    private Commune commune ;*/
+    /*@OneToOne(mappedBy="maire")*/  
+	@XmlElement
+    @JoinColumn(name="commune")
+    private Commune commune ;
     
 
 
-	public int getId() {
+	public Commune getCommune() {
+		return commune;
+	}
+
+	public void setCommune(Commune commune) {
+		this.commune = commune;
+	}
+
+	public long getId() {
 		return id;
 	}
 

@@ -34,7 +34,7 @@ public class Departement implements Serializable {
 	private String nom;
 
 	@XmlElement
-	@Column(name="code_departement")
+	@Column(name="code_postal")
 	private String code;
 
 	/*@OneToMany(mappedBy="departement",fetch=FetchType.LAZY)
